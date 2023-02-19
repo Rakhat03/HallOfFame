@@ -15,5 +15,9 @@ urlpatterns = [
     path('halloffame/<int:pk>', DetailHall.as_view(), name = 'detail_hall'),
     path('halloffame/<int:pk>/update', UpdateHall.as_view(), name = 'update_hall'),
     path('halloffame/<int:pk>/delete', DeleteHall.as_view(), name = 'delete_hall'),
+    #Video
+    path('halloffame/<int:pk>/addvideo', add_video, name = 'add_video'),
+    path('video/search', video_search, name = 'video_search'),
+    path('video/<int:pk>/delete', DeleteVideo.as_view(), name = 'delete_video'),
     
 ]
